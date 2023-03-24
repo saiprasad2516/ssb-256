@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <!-- navigation code in the header-->
+  <header>
+        <nav class="navigation">
+        <h1 class="logo"><span>Vd</span>.aI</h1>
+        <a href="index.html">Home</a>
+        <a href="{{ url_for('Tryon')}}">Try-On</a>
+        <a href="{{ url_for('OurSamples')}}">Our Samples</a>
+        <a href="{{ url_for('AboutUs')}}">About Us</a>
+        <a href="index.html">Login</a>
+    </nav>
+    
+</header>
+<!-- login form code from here-->
+  <div class="full-page">
+    <div class="login">
+    <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" onclick="login()" class="toggle-btn" >Log-In</button>
+      <button type="button" onclick="register()" class="toggle-btn" >Register</button>
+    </div>
+    <div class="socialmedia">
+     <img src="fb.png">
+     <img src="gp.png">
+    </div>
+    <form id="login" class="input-group">
+      <input type="text" class="input-field" placeholder="User id" required>
+      <input type="text" class="input-field" placeholder="Password" required>
+      <input type="checkbox" class="check-box"><span>Remember password</span>
+      <button type="Submit" class="Submit-btn">Log-In</button>
+    </form>
+    <form id="register" class="input-group">
+      <input type="text" class="input-field" placeholder="User id" required>
+      <input type="email" class="input-field" placeholder="e-mail id" required>
+      <input type="password" class="input-field" placeholder="Password" required>
+      <input type="password" class="input-field" placeholder="Confirm Password" required>
+      <input type="checkbox" class="check-box"><span>I agreed to the terms & conditions</span>
+      <button type="Submit" class="Submit-btn">Register</button>
+    </form>
+    </div>
+  </div>
+  <script>
+    var x= document.getElementById("login");
+    var y= document.getElementById("register");
+    var z= document.getElementById("btn");
+
+    function login(){
+      x.style.left="50px";
+      y.style.left="450px";
+      z.style.left="0";
+    }
+
+    function register(){
+      x.style.left="-400px";
+      y.style.left="50px";
+      z.style.left="110px";
+    }
+
+  </script>
+</body>
+</html>
